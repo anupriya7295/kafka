@@ -22,8 +22,6 @@ public class BatchProcessing {
 	}
 	@PostMapping(value = "/publish")
 	public void sendMessageToKafkaTopic(@RequestBody Object obj, @RequestParam("type") String type) throws JsonProcessingException{
-		System.out.println(type);
-		
 		this.producer.sendMessage(new ObjectMapper().writeValueAsString(obj), type);
 	}
 }

@@ -1,16 +1,10 @@
 server:
-  port: 9000
+  port: 9001
 topic:
     product: product
     category: category
 spring:
   kafka:
-    consumer:
-      bootstrap-servers: localhost:9092
-      group-id: group-id
-      auto-offset-reset: earliest
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     producer:
       bootstrap-servers: localhost:9092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
